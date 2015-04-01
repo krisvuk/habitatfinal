@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:orientation="vertical"
+    tools:context="habitatfinal.habitatfinal.register"
+    android:background="#ffcae987"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/imageView4"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/register_banner" />
+
+    <EditText
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Email address..."
+        android:layout_marginTop="0dp"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:layout_below="@+id/editText3"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/editText3"
+        android:hint="Password..."
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText5"
+        android:layout_below="@+id/editText4"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/editText4"
+        android:hint="Retype password..."
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText6"
+        android:layout_below="@+id/editText5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="First name..."
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText7"
+        android:layout_below="@+id/editText6"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/editText6"
+        android:hint="Last name..."
+        android:layout_gravity="center_horizontal" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:hint="Country..."
+        android:layout_gravity="center_horizontal" />
+
+    <ImageView
+        android:layout_width="325dp"
+        android:layout_height="61dp"
+        android:id="@+id/imageView3"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/nextstep_btn"
+        android:layout_marginTop="20dp"
+        android:onClick="next_step_click" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Step 1 of 3"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

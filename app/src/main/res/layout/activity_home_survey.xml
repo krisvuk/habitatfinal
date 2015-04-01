@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="habitatfinal.habitatfinal.home_survey"
+    android:background="#ffcae987"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:id="@+id/imageView7"
+        android:background="@mipmap/home_survey_banner" />
+
+    <ImageButton
+        android:layout_width="325dp"
+        android:layout_height="61dp"
+        android:id="@+id/imageButton3"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/finished_btn"
+        android:layout_marginTop="250dp"
+        android:onClick="click_finish" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Step 3 or 3"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
