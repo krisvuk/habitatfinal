@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light">
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
     </style>
-    <style name="menu_dashboard." parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">#ef721f</item>
+    <style name="DashboardTheme"
+        parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">@color/primaryColor</item>
+        <item name="android:colorPrimaryDark">@color/primaryDarkColor</item>
     </style>
+    <style name="ProfileTheme"
+        parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">@color/primaryColor</item>
+        <item name="android:colorPrimaryDark">@color/primaryDarkColor</item>
+    </style>
+
 </resources>

@@ -6,6 +6,7 @@
     <style name="DashboardTheme"
         parent="@android:style/Theme.Holo.Light.DarkActionBar">
         <item name="android:actionBarStyle">@style/Dashboard_Style</item>
+
     </style>
     <style name="ProfileTheme"
         parent="@android:style/Theme.Holo.Light.DarkActionBar">
@@ -15,10 +16,14 @@
     <!-- ActionBar styles -->
     <style name="Dashboard_Style"
         parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:colorPrimary">@color/primaryColor</item>
+        <item name="android:colorPrimaryDark">@color/primaryDarkColor</item>
 
     </style>
     <style name="Profile_Style"
         parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:colorPrimary">@color/primaryColor</item>
+        <item name="android:colorPrimaryDark">@color/primaryDarkColor</item>
 
     </style>
 </resources>
