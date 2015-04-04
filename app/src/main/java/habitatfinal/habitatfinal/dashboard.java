@@ -57,8 +57,6 @@ public class dashboard extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
-            case R.id.action_dashboard:
-                return true;
             case R.id.action_profile:
                 Intent h = new Intent(this, profile.class);
                 startActivity(h);

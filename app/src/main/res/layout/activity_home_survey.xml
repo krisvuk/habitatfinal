@@ -7,13 +7,29 @@
     android:paddingBottom="0dp"
     tools:context="habitatfinal.habitatfinal.home_survey"
     android:background="#ffcae987"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="180dp"
         android:id="@+id/imageView7"
         android:background="@mipmap/home_survey_banner" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/water_spinner" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/heat_spinner" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/electricity_spinner" />
 
     <ImageButton
         android:layout_width="325dp"

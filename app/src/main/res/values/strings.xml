@@ -8,4 +8,11 @@
     <string name="title_activity_transportation_survey">transportation_survey</string>
     <string name="title_activity_home_survey">home_survey</string>
     <string name="title_activity_profile">profile</string>
+    <string-array name="pricerange">
+        <item>0-50</item>
+        <item>50-100</item>
+        <item>100-150</item>
+        <item>150-200</item>
+        <item>200+</item>
+    </string-array>
 </resources>

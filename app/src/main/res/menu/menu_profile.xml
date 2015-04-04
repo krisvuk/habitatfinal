@@ -3,9 +3,7 @@
     tools:context="habitatfinal.habitatfinal.dashboard">
     <item android:id="@+id/action_dashboard" android:title="Dashboard"
         android:orderInCategory="100" android:showAsAction="ifRoom" />
-    <item android:id="@+id/action_profile" android:title="Profile"
-        android:orderInCategory="100" android:showAsAction="ifRoom" />
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" android:showAsAction="ifRoom" />
+        android:orderInCategory="100"/>
 
 </menu>

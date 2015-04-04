@@ -54,8 +54,6 @@ public class profile extends Activity {
                 Intent i = new Intent(this, dashboard.class);
                 startActivity(i);
                 return true;
-            case R.id.action_profile:
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
