@@ -64,7 +64,6 @@ public class home_survey extends Activity {
 
     public void click_finish(View view){
         Intent i = new Intent(this, dashboard.class);
-
         startActivity(i);
     }
 
