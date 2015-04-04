@@ -43,9 +43,12 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/profile.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1139">
               <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
 =======
+=======
+>>>>>>> origin/master
             <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1139">
               <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
 >>>>>>> origin/master
@@ -58,8 +61,13 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/dashboard.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1258">
               <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+=======
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+>>>>>>> origin/master
 =======
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
               <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
@@ -73,12 +81,15 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/CarsAPI.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
               <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
 =======
+=======
+>>>>>>> origin/master
             <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="374">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
@@ -88,6 +99,7 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="VehicleIdAsyncTask.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/VehicleIdAsyncTask.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,6 +107,8 @@
               <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding />
 =======
+=======
+>>>>>>> origin/master
       <file leaf-file-name="CarsAPI.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/CarsAPI.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,6 +116,22 @@
               <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+<<<<<<< HEAD
+=======
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountryAPI.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/CountryAPI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+              <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2288#2296#0" expanded="true" />
+>>>>>>> origin/master
               </folding>
             </state>
           </provider>
@@ -143,6 +173,7 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="activity_profile.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml">
           <provider editor-type-id="android-designer">
@@ -152,6 +183,8 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
 =======
+=======
+>>>>>>> origin/master
       <file leaf-file-name="CarAsyncTask.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/CarAsyncTask.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -187,8 +220,13 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/register.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="918">
               <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+=======
+            <state vertical-scroll-proportion="0.43965518" vertical-offset="0" max-vertical-offset="884">
+              <caret line="22" column="97" selection-start-line="22" selection-start-column="97" selection-end-line="22" selection-end-column="97" />
+>>>>>>> origin/master
 =======
             <state vertical-scroll-proportion="0.43965518" vertical-offset="0" max-vertical-offset="884">
               <caret line="22" column="97" selection-start-line="22" selection-start-column="97" selection-end-line="22" selection-end-column="97" />
@@ -832,7 +870,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/dashboard.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/CarsAPI.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/AddUser.java" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/CountryAPI.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/register.java" />
+>>>>>>> origin/master
 =======
         <option value="$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/CountryAPI.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/register.java" />
@@ -947,7 +990,10 @@
         </subPane>
       </pane>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/master
       <pane id="Scope" />
 >>>>>>> origin/master
     </panes>
@@ -1156,12 +1202,17 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.026666667" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> origin/master
 =======
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1184,9 +1235,12 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1217,7 +1271,11 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/profile.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1173">
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1139">
+>>>>>>> origin/master
 =======
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1139">
 >>>>>>> origin/master
@@ -1229,7 +1287,11 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/dashboard.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1292">
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1258">
+>>>>>>> origin/master
 =======
         <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1258">
 >>>>>>> origin/master
@@ -1250,7 +1312,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1037">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+=======
+          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+>>>>>>> origin/master
 =======
           <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
 >>>>>>> origin/master
@@ -1306,7 +1372,11 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/GPSTracker.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="3162">
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="3162">
+>>>>>>> origin/master
 =======
         <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="3162">
 >>>>>>> origin/master
@@ -1495,7 +1565,10 @@
         </state>
       </provider>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/master
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/CarsAPI.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1522,12 +1595,18 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/dashboard.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1258">
           <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/VehicleIdAsyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
@@ -1561,6 +1640,13 @@
         <state vertical-scroll-proportion="0.5212264" vertical-offset="0" max-vertical-offset="2091">
           <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/habitatfinal/habitatfinal/register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43965518" vertical-offset="0" max-vertical-offset="884">
+          <caret line="22" column="97" selection-start-line="22" selection-start-column="97" selection-end-line="22" selection-end-column="97" />
+          <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>

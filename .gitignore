@@ -1,7 +1,6 @@
-.gradle/2.2.1/taskArtifacts/taskArtifacts.bin
-.gradle/2.2.1/taskArtifacts/fileHashes.bin
-.gradle/2.2.1/taskArtifacts/fileHashes.bin
-*.bin
-.idea/workspace.xml
-.idea/workspace.xml
-.gradle/2.2.1/taskArtifacts/cache.properties.lock
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
