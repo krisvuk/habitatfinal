@@ -7,15 +7,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Spinner;
 
 
 public class register extends Activity {
+    CountryAPI country;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        Spinner country_spinner = (Spinner) findViewById(R.id.spinner);
+        country = new CountryAPI(country_spinner, this);
+        country.execute("https://projectearthspirit.appspot.com/_ah/api/countries/v1/countries");
     }
 
     public void next_step_click(View view){
