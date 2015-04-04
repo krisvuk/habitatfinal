@@ -12,6 +12,7 @@ import android.widget.Spinner;
 
 public class register extends Activity {
     CountryAPI country;
+    AddUser addUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,8 @@ public class register extends Activity {
         Spinner country_spinner = (Spinner) findViewById(R.id.spinner);
         country = new CountryAPI(country_spinner, this);
         country.execute("https://projectearthspirit.appspot.com/_ah/api/countries/v1/countries");
+        addUser = new AddUser();
+        addUser.execute();
     }
 
     public void next_step_click(View view){
