@@ -21,6 +21,9 @@ public class dashboard extends Activity {
         // as the ContentView for this Activity
         mGLSurface = new EarthGLSurfaceView(this);
         setContentView(mGLSurface);
+        //generates a list of cars
+        CarsAPI cars = new CarsAPI();
+        cars.execute();
     }
 
     @Override

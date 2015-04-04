@@ -5,8 +5,12 @@ package habitatfinal.habitatfinal;
  */
 public class GetUser {
 
-    
 
+    public GetUser(){
+
+
+
+    }
 
 
 }
