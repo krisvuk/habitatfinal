@@ -3,6 +3,7 @@ package habitatfinal.habitatfinal;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,6 +25,7 @@ public class register extends Activity {
         country.execute("https://projectearthspirit.appspot.com/_ah/api/countries/v1/countries");
         addUser = new AddUser();
         addUser.execute();
+        Log.i("", "Well, you made it this far");
     }
 
     public void next_step_click(View view){

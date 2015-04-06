@@ -4,9 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Timer;
+import java.util.TimerTask;
+import android.os.Handler;
 
 public class dashboard extends Activity {
 
