@@ -3,12 +3,18 @@ package habitatfinal.habitatfinal;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.Spinner;
+
+import java.io.Serializable;
+import java.util.ArrayList;
 
 
 public class register extends Activity {
@@ -20,16 +26,34 @@ public class register extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        Spinner country_spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner country_spinner = (Spinner) findViewById(R.id.country);
         country = new CountryAPI(country_spinner, this);
         country.execute("https://projectearthspirit.appspot.com/_ah/api/countries/v1/countries");
-        addUser = new AddUser();
-        addUser.execute();
         Log.i("", "Well, you made it this far");
     }
 
     public void next_step_click(View view){
         Intent i = new Intent(this, transportation_survey.class);
+
+        addUser = new AddUser();
+        ArrayList<String> newUser = new ArrayList<>(0);
+        Spinner country_spinner = (Spinner) findViewById(R.id.country);
+        EditText email = (EditText)findViewById(R.id.email);
+        EditText password = (EditText)findViewById(R.id.password);
+        EditText re_password = (EditText)findViewById(R.id.repassword);
+        EditText first_name = (EditText)findViewById(R.id.first_name);
+        EditText last_name = (EditText)findViewById(R.id.last_name);
+        if(password.getText().toString().equals(re_password.getText().toString())) {
+            newUser.add(email.getText().toString());
+            newUser.add(password.getText().toString());
+            newUser.add(first_name.getText().toString());
+            newUser.add(last_name.getText().toString());
+            newUser.add(country_spinner.getSelectedItem().toString());
+        }
+        User newCreate =  new User(newUser);
+        Bundle b = new Bundle();
+        b.putSerializable("User Info", newCreate);
+        i.putExtras(b);
         startActivity(i);
     }
 

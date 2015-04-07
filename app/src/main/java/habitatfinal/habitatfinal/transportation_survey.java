@@ -107,6 +107,7 @@ public class transportation_survey extends Activity {
         // demo #2, *4: implicit intent (and use of an intent filter)
         // - action name declared by an intent filter: "net.learn2develop.SecondActivity"
         Intent dataIntent = new Intent(this, home_survey.class);
+        dataIntent.putExtras(getIntent());
         List<Car> v = vid.getVehicle();
         int vehicleid = 0;
         for(Car i:v)

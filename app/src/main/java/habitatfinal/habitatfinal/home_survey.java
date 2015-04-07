@@ -64,6 +64,9 @@ public class home_survey extends Activity {
 
     public void click_finish(View view){
         Intent i = new Intent(this, dashboard.class);
+        AddUser newUser = new AddUser();
+        User u = (User) getIntent().getSerializableExtra("User Info");
+        newUser.execute(u);
         startActivity(i);
     }
 

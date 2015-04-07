@@ -26,19 +26,20 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddUser extends AsyncTask<String, Void, String> {
+public class AddUser extends AsyncTask<User, Void, String> {
 
    public String url = "https://projectearthspirit.appspot.com/_ah/api/users/v1/createuser";
 
     @Override
-    protected String doInBackground(String... params) {
+    protected String doInBackground(User... param) {
         JSONObject jsonobj = new JSONObject();
+        User params = param[0];
         try {
-            jsonobj.put("email", "kris@username.com");
-            jsonobj.put("firstName", "Kris");
-            jsonobj.put("lastName", "Vukasinovic");
-            jsonobj.put("pw_hash", "password");
-            jsonobj.put("country", "Canada");
+            jsonobj.put("email", params.getEmail());
+            jsonobj.put("firstName", params.getFirst_name());
+            jsonobj.put("lastName", params.getLast_name());
+            jsonobj.put("pw_hash", params.getPwd());
+            jsonobj.put("country", params.getCountry());
             DefaultHttpClient httpclient = new DefaultHttpClient();
             HttpPost httppostreq = new HttpPost(url);
             StringEntity se = new StringEntity(jsonobj.toString());

@@ -37,7 +37,6 @@
         android:id="@+id/imageButton3"
         android:layout_gravity="center_horizontal"
         android:background="@mipmap/finished_btn"
-        android:layout_marginTop="250dp"
         android:onClick="click_finish" />
 
     <TextView
