@@ -6,6 +6,7 @@ import java.util.ArrayList;
 /**
  * Created by sandeep on 2015-04-06.
  */
+
 public class User implements Serializable{
     private String email, pwd, first_name, last_name, country;
     public User(ArrayList<String> user)

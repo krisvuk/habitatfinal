@@ -48,7 +48,7 @@ public class CarsAPI extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String response) {
-        Log.i("here", response);
+
     }
 
 

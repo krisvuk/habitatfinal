@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -23,6 +24,8 @@ public class transportation_survey extends Activity {
     ImageView nextButton;
     CarAsyncTask lister;
     VehicleIdAsyncTask vid;
+    AddCar addCar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -104,26 +107,42 @@ public class transportation_survey extends Activity {
 
     public void onClick(View view) {
 
+        ArrayList<String> newCar = new ArrayList<>(0);
+        Spinner year_spinner = (Spinner) findViewById(R.id.year_spinner);
+        Spinner manufacturers_spinner = (Spinner) findViewById(R.id.manufacturers_spinner);
+        Spinner models_spinner = (Spinner) findViewById(R.id.models_spinner);
+        Spinner model_type_spinner = (Spinner) findViewById(R.id.model_type_spinner);
         // demo #2, *4: implicit intent (and use of an intent filter)
         // - action name declared by an intent filter: "net.learn2develop.SecondActivity"
         Intent dataIntent = new Intent(this, home_survey.class);
         dataIntent.putExtras(getIntent());
         List<Car> v = vid.getVehicle();
-        int vehicleid = 0;
+        String vehicleId = "";
         for(Car i:v)
         {
             if(i.getCarType() == model_type.getSelectedItem().toString())
             {
-                vehicleid = i.getCarId();
+                vehicleId = String.valueOf(i.getCarId());
             }
         }
-        Log.i("Vehicle Id", String.valueOf(vehicleid));
-        // the putExtra( ) method
-        dataIntent.putExtra( "Manufacture", manufacture.getSelectedItem().toString() );
-        dataIntent.putExtra( "Model", model.getSelectedItem().toString() );
-        dataIntent.putExtra("VehicleId", vehicleid);
+        newCar.add(year_spinner.getSelectedItem().toString());
+        newCar.add(manufacturers_spinner.getSelectedItem().toString());
+        newCar.add(models_spinner.getSelectedItem().toString());
+        newCar.add(model_type_spinner.getSelectedItem().toString());
+        newCar.add(vehicleId);
+        CarAdd newCarAdd =  new CarAdd(newCar);
+        Bundle b = new Bundle();
+        b.putSerializable("Car Info", newCarAdd);
+        dataIntent.putExtras(b);
+//        the putExtra( ) method
+//        dataIntent.putExtra( "Manufacture", manufacture.getSelectedItem().toString() );
+//        dataIntent.putExtra( "Model", model.getSelectedItem().toString() );
+//        dataIntent.putExtra("VehicleId", vehicleId);
+
+
 
         startActivity(dataIntent);
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -145,5 +164,6 @@ public class transportation_survey extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+
     }
 }

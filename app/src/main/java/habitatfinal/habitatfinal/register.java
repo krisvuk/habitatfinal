@@ -35,7 +35,7 @@ public class register extends Activity {
     public void next_step_click(View view){
         Intent i = new Intent(this, transportation_survey.class);
 
-        addUser = new AddUser();
+        //addUser = new AddUser();
         ArrayList<String> newUser = new ArrayList<>(0);
         Spinner country_spinner = (Spinner) findViewById(R.id.country);
         EditText email = (EditText)findViewById(R.id.email);

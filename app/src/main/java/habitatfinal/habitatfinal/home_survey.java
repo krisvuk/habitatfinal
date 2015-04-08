@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.database.DataSetObserver;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -63,11 +64,17 @@ public class home_survey extends Activity {
     }
 
     public void click_finish(View view){
-        Intent i = new Intent(this, dashboard.class);
+        Intent dataIntent = new Intent(this, dashboard.class);
+        dataIntent.putExtras(getIntent());
         AddUser newUser = new AddUser();
+        AddCar newCar = new AddCar();
         User u = (User) getIntent().getSerializableExtra("User Info");
+        CarAdd c = (CarAdd) getIntent().getSerializableExtra("Car Info");
+        Log.i("Car Id: ", u.getEmail());
+        Log.i("Car Id: ", c.getCarId());
         newUser.execute(u);
-        startActivity(i);
+        newCar.execute(c);
+        startActivity(dataIntent);
     }
 
     @Override

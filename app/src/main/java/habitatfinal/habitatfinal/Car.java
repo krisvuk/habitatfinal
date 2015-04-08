@@ -1,5 +1,8 @@
 package habitatfinal.habitatfinal;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
 /**
  * Created by sandeep on 2015-03-15.
  */
