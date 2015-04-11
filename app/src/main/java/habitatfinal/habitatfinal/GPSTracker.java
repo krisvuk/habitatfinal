@@ -25,8 +25,8 @@ public class GPSTracker extends Service implements LocationListener{
     double latitude;
     double longitude;
 
-    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 1;
-    private static final long MIN_TIME_BW_UPDATES = 1000 * 60 * 1;
+    private static final float MIN_DISTANCE_CHANGE_FOR_UPDATES = (float) 0.001;
+    private static final long MIN_TIME_BW_UPDATES = 1;
 
     protected LocationManager locationManager;
 
