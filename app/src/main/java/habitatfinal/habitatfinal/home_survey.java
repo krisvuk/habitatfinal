@@ -32,12 +32,12 @@ public class home_survey extends Activity {
 
         TypedArray gen_array = getResources().obtainTypedArray(R.array.pricerange);
         ArrayList<String> water_array= new ArrayList<String>(0);
-        water_array.add("Please pick a price range for your monthly water bill");
+        water_array.add("Your Monthly Water Bill");
         ArrayList<String> heat_array = new ArrayList<>(0);
         ArrayList<String> electricity_array = new ArrayList<>(0);
 
-        heat_array.add("Please pick a price range for your monthly heating bill");
-        electricity_array.add("Please pick a price range for your monthly electricity bill");
+        heat_array.add("Your Monthly Heating Bill");
+        electricity_array.add("Your Monthly Electricity Bill");
         for(int i = 0; i < gen_array.length(); i++)
         {
             water_array.add(gen_array.getString(i));

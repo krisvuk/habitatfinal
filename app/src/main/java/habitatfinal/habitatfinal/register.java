@@ -1,6 +1,7 @@
 package habitatfinal.habitatfinal;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcel;
@@ -54,7 +55,7 @@ public class register extends Activity {
         Bundle b = new Bundle();
         b.putSerializable("User Info", newCreate);
         i.putExtras(b);
-        startActivity(i);
+        startActivity(i, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
 
 

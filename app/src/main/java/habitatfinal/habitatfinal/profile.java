@@ -4,11 +4,19 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -17,6 +25,7 @@ public class profile extends Activity {
 
     GPSTracker gps;
     private double long1, lat1;
+    ListView listView;
 
     public static double haversine(
             double lat1, double lng1, double lat2, double lng2) {
@@ -36,6 +45,12 @@ public class profile extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        ImageView image = (ImageView) findViewById(R.id.profileView);
+        image.setImageResource(R.drawable.user_image);
+        ImageView image2 = (ImageView) findViewById(R.id.carView);
+        image2.setImageResource(R.drawable.car_image);
+        ImageView image3 = (ImageView) findViewById(R.id.homeView);
+        image3.setImageResource(R.drawable.home_image);
         gps = new GPSTracker(profile.this);
         if(gps.canGetLocation()) {
 
