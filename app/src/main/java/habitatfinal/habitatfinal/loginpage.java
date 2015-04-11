@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 
 
 public class loginpage extends Activity {
@@ -26,6 +27,8 @@ public class loginpage extends Activity {
 
     public void click_login(View view){
         Intent i = new Intent(this, dashboard.class);
+        EditText em = (EditText) findViewById(R.id.emailLogin);
+        i.putExtra("email", em.getText().toString());
         startActivity(i);
     }
 

@@ -1,6 +1,7 @@
 package habitatfinal.habitatfinal;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,9 +11,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -26,6 +29,7 @@ public class profile extends Activity {
     GPSTracker gps;
     private double long1, lat1;
     ListView listView;
+    String emailAdd;
 
     public static double haversine(
             double lat1, double lng1, double lat2, double lng2) {
@@ -52,6 +56,8 @@ public class profile extends Activity {
         ImageView image3 = (ImageView) findViewById(R.id.homeView);
         image3.setImageResource(R.drawable.home_image);
         gps = new GPSTracker(profile.this);
+        emailAdd = getIntent().getStringExtra("email");
+        Toast.makeText(this, emailAdd, Toast.LENGTH_LONG).show();
         if(gps.canGetLocation()) {
 
             lat1 = gps.getLatitude();
@@ -92,6 +98,33 @@ public class profile extends Activity {
 
 
 
+    }
+    public void userClick(View view){
+        Intent i = new Intent(this, register.class);
+
+        //addUser = new AddUser();
+        i.putExtra("flag", 1);
+        i.putExtras(getIntent());
+
+        startActivity(i, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+    }
+
+    public void carClick(View view){
+        Intent i = new Intent(this, transportation_survey.class);
+
+        //addUser = new AddUser();
+        i.putExtra("flag", 1);
+
+        startActivity(i, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+    }
+
+    public void homeClick(View view){
+        Intent i = new Intent(this, home_survey.class);
+
+        //addUser = new AddUser();
+        i.putExtra("flag", 1);
+
+        startActivity(i, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
 
     @Override

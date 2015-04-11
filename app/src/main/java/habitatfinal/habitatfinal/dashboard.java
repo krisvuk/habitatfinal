@@ -63,6 +63,7 @@ public class dashboard extends Activity {
         switch (item.getItemId()) {
             case R.id.action_profile:
                 Intent h = new Intent(this, profile.class);
+                h.putExtras(getIntent());
                 startActivity(h);
                 return true;
             default:

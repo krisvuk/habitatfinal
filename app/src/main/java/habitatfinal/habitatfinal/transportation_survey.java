@@ -25,12 +25,15 @@ public class transportation_survey extends Activity {
     CarAsyncTask lister;
     VehicleIdAsyncTask vid;
     AddCar addCar;
+    int flag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transportation_survey);
+        Intent i = getIntent();
+        flag = i.getIntExtra("flag", 0);
         year = (Spinner) findViewById(R.id.year_spinner);
         manufacture = (Spinner) findViewById(R.id.manufacturers_spinner);
         model = (Spinner) findViewById(R.id.models_spinner);
@@ -103,6 +106,12 @@ public class transportation_survey extends Activity {
 
             }
         });
+        if(flag == 1)
+        {
+            /*
+            TODO: Get user information from data base and set the dropdown to those values
+             */
+        }
     }
 
     public void onClick(View view) {
@@ -114,26 +123,36 @@ public class transportation_survey extends Activity {
         Spinner model_type_spinner = (Spinner) findViewById(R.id.model_type_spinner);
         // demo #2, *4: implicit intent (and use of an intent filter)
         // - action name declared by an intent filter: "net.learn2develop.SecondActivity"
-        Intent dataIntent = new Intent(this, home_survey.class);
-        dataIntent.putExtras(getIntent());
-        List<Car> v = vid.getVehicle();
-        String vehicleId = "";
-        for(Car i:v)
-        {
-            if(i.getCarType() == model_type.getSelectedItem().toString())
-            {
-                vehicleId = String.valueOf(i.getCarId());
-            }
+        if (flag == 1){
+            /*
+            TODO: Edit Information on the UserCar data
+             */
+            Intent i = new Intent(this, profile.class);
+            //Add the email of the user here too
+            startActivity(i);
         }
-        newCar.add(year_spinner.getSelectedItem().toString());
-        newCar.add(manufacturers_spinner.getSelectedItem().toString());
-        newCar.add(models_spinner.getSelectedItem().toString());
-        newCar.add(model_type_spinner.getSelectedItem().toString());
-        newCar.add(vehicleId);
-        CarAdd newCarAdd =  new CarAdd(newCar);
-        Bundle b = new Bundle();
-        b.putSerializable("Car Info", newCarAdd);
-        dataIntent.putExtras(b);
+        else
+        {
+            Intent dataIntent = new Intent(this, home_survey.class);
+            dataIntent.putExtras(getIntent());
+            List<Car> v = vid.getVehicle();
+            String vehicleId = "";
+            for (Car i : v) {
+                if (i.getCarType() == model_type.getSelectedItem().toString()) {
+                    vehicleId = String.valueOf(i.getCarId());
+                }
+            }
+            newCar.add(year_spinner.getSelectedItem().toString());
+            newCar.add(manufacturers_spinner.getSelectedItem().toString());
+            newCar.add(models_spinner.getSelectedItem().toString());
+            newCar.add(model_type_spinner.getSelectedItem().toString());
+            newCar.add(vehicleId);
+            CarAdd newCarAdd = new CarAdd(newCar);
+            Bundle b = new Bundle();
+            b.putSerializable("Car Info", newCarAdd);
+            dataIntent.putExtras(b);
+            startActivity(dataIntent);
+        }
 //        the putExtra( ) method
 //        dataIntent.putExtra( "Manufacture", manufacture.getSelectedItem().toString() );
 //        dataIntent.putExtra( "Model", model.getSelectedItem().toString() );
@@ -141,7 +160,6 @@ public class transportation_survey extends Activity {
 
 
 
-        startActivity(dataIntent);
 
     }
     @Override

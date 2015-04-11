@@ -21,15 +21,27 @@ import java.util.ArrayList;
 public class register extends Activity {
     CountryAPI country;
     AddUser addUser;
+    int flag;
+    String userEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+        Intent i = getIntent();
         setContentView(R.layout.activity_register);
+        flag = i.getIntExtra("flag", 0);
         Spinner country_spinner = (Spinner) findViewById(R.id.country);
         country = new CountryAPI(country_spinner, this);
         country.execute("https://projectearthspirit.appspot.com/_ah/api/countries/v1/countries");
+        if(flag == 1)
+        {
+            //userEmail = i.getStringExtra("email");
+            /*
+
+            TODO: Get email info and make it global to get user information and populate data fields with information
+             */
+        }
         Log.i("", "Well, you made it this far");
     }
 
@@ -51,11 +63,21 @@ public class register extends Activity {
             newUser.add(last_name.getText().toString());
             newUser.add(country_spinner.getSelectedItem().toString());
         }
-        User newCreate =  new User(newUser);
-        Bundle b = new Bundle();
-        b.putSerializable("User Info", newCreate);
-        i.putExtras(b);
-        startActivity(i, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        if(flag == 1)
+        {
+            /*
+            TODO: Edit Information accordingly
+             */
+            startActivity(new Intent(this, profile.class), ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        }
+        else {
+            User newCreate = new User(newUser);
+            Bundle b = new Bundle();
+            b.putSerializable("User Info", newCreate);
+            i.putExtra("email", newCreate.getEmail());
+            i.putExtras(b);
+            startActivity(i, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        }
     }
 
 

@@ -42,7 +42,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#333333"
-                        android:text="Photo Title"
+                        android:text="Edit User Profile Information"
                         android:id="@+id/textView"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="5dp" />
@@ -70,7 +70,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#333333"
-                        android:text="Photo Title"
+                        android:text="Edit Car Information"
                         android:id="@+id/textView1"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="5dp" />
@@ -98,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#333333"
-                        android:text="Photo Title"
+                        android:text="Edit Home Information"
                         android:id="@+id/textView2"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="5dp" />
