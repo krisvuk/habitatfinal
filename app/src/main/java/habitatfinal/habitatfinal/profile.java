@@ -27,7 +27,10 @@ import java.util.TimerTask;
 public class profile extends Activity {
 
     GPSTracker gps;
-    private double long1, lat1;
+    private double startingLongitude, startingLatitude;
+    private double startingLong, startingLat, endingLong, endingLat;
+    boolean moving = false;
+
     ListView listView;
     String emailAdd;
 
@@ -41,8 +44,9 @@ public class profile extends Activity {
                         * Math.sin(dLon / 2) * Math.sin(dLon / 2);
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         double d = r * c;
-        return d*1000.00;
+        return d;
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +64,8 @@ public class profile extends Activity {
         Toast.makeText(this, emailAdd, Toast.LENGTH_LONG).show();
         if(gps.canGetLocation()) {
 
-            lat1 = gps.getLatitude();
-            long1 = gps.getLongitude();
+            startingLatitude = gps.getLatitude();
+            startingLongitude = gps.getLongitude();
         }
         final Handler handler = new Handler();
         Timer timer = new Timer();
@@ -74,14 +78,40 @@ public class profile extends Activity {
                         try {
                             if(gps.canGetLocation()) {
                                 gps = new GPSTracker(profile.this);
-                                double latitude = gps.getLatitude();
-                                double longitude = gps.getLongitude();
-                                double distance = haversine(lat1, long1, latitude, longitude);
-                                Toast.makeText(
-                                        getApplicationContext(),
-                                        String.valueOf(distance) + " meters", Toast.LENGTH_LONG).show();
-                                long1 = longitude;
-                                lat1 = latitude;
+                                double endingLatitude = gps.getLatitude();
+                                double endingLongitude = gps.getLongitude();
+                                double distance = haversine(startingLatitude, startingLongitude, endingLatitude, endingLongitude);
+                                double speed = distance / 0.01666666666;
+
+                                if(speed > 25.0){
+
+                                    //check if this is the first time the user started to move
+                                    if(moving == false){
+                                        startingLong = startingLongitude;
+                                        startingLat = startingLatitude;
+                                    }
+
+                                    moving = true;
+                                    Toast.makeText(
+                                            getApplicationContext(),
+                                            "Moving at: " + String.valueOf(speed) + " km/h", Toast.LENGTH_LONG).show();
+
+                                }
+                                else{
+                                    if(moving == true){
+                                        endingLong = endingLongitude;
+                                        endingLat = endingLatitude;
+                                        /*
+                                        Plug in the distances into the distance matrix to calculate distance
+                                        */
+                                    }
+                                    moving = false;
+                                    Toast.makeText(
+                                            getApplicationContext(),
+                                            "User is not moving", Toast.LENGTH_LONG).show();
+                                }
+                                startingLongitude = endingLongitude;
+                                startingLatitude = endingLatitude;
                             } else {
                                 gps.showSettingsAlert();
                             }
@@ -95,6 +125,7 @@ public class profile extends Activity {
         };
 
         timer.schedule(doAsynchronousTask, 0, 10000);
+
 
 
 

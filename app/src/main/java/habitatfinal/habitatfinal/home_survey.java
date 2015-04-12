@@ -68,12 +68,14 @@ public class home_survey extends Activity {
         dataIntent.putExtras(getIntent());
         AddUser newUser = new AddUser();
         AddCar newCar = new AddCar();
+        AddUserCar newUserCar = new AddUserCar();
         User u = (User) getIntent().getSerializableExtra("User Info");
         CarAdd c = (CarAdd) getIntent().getSerializableExtra("Car Info");
-        Log.i("Car Id: ", u.getEmail());
+        Log.i("User Id: ", u.getEmail());
         Log.i("Car Id: ", c.getCarId());
         newUser.execute(u);
         newCar.execute(c);
+        newUserCar.execute(u.getEmail(),c.getCarId());
         startActivity(dataIntent);
     }
 
