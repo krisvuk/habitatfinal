@@ -137,11 +137,13 @@ public class profile extends Activity {
         TextView first_name = (TextView) findViewById(R.id.firstName);
         TextView last_name = (TextView) findViewById(R.id.lastName);
         TextView emissions = (TextView) findViewById(R.id.emissions);
+        TextView car = (TextView) findViewById(R.id.car);
 
         email.setText(user.getEmail());
         first_name.setText(user.getFirstName());
         last_name.setText(user.getLastName());
         emissions.setText("You have produced " + String.valueOf(emissionsPerKm) + " Grams of GHG today.");
+        car.setText(user.getCars().get(0).getMake() + ", " + user.getCars().get(0).getModel() + ", " + user.getCars().get(0).getYear());
 
 
         Log.d("Last name: ", user.getLastName());

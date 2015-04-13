@@ -70,4 +70,19 @@
         android:id="@+id/emissions"
         android:layout_below="@+id/textView6"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User drives:"
+        android:id="@+id/textview9"
+        android:layout_below="@+id/emissions"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/car"
+        android:layout_below="@+id/textview9"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
