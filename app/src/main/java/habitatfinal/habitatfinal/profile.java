@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -53,12 +54,6 @@ public class profile extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        ImageView image = (ImageView) findViewById(R.id.profileView);
-        image.setImageResource(R.drawable.user_image);
-        ImageView image2 = (ImageView) findViewById(R.id.carView);
-        image2.setImageResource(R.drawable.car_image);
-        ImageView image3 = (ImageView) findViewById(R.id.homeView);
-        image3.setImageResource(R.drawable.home_image);
         gps = new GPSTracker(profile.this);
         emailAdd = getIntent().getStringExtra("email");
         Toast.makeText(this, emailAdd, Toast.LENGTH_LONG).show();
@@ -126,7 +121,30 @@ public class profile extends Activity {
 
         timer.schedule(doAsynchronousTask, 0, 10000);
 
+        UserData user = (UserData)getApplication();
+        Log.d("Email: ", user.getEmail());
+        Log.d("First name: ", user.getFirstName());
+        Log.d("Last name: ", user.getLastName());
+        ArrayList<Car> cars = new ArrayList<Car>();
+        for(int i = 0; i < user.getCars().size(); i++){
+            cars.add(user.getCars().get(i));
+        }
+        double emissionsPerKm = Double.parseDouble(cars.get(0).getEmissions());
 
+        emissionsPerKm =  emissionsPerKm * 30.0;
+
+        TextView email = (TextView) findViewById(R.id.email);
+        TextView first_name = (TextView) findViewById(R.id.firstName);
+        TextView last_name = (TextView) findViewById(R.id.lastName);
+        TextView emissions = (TextView) findViewById(R.id.emissions);
+
+        email.setText(user.getEmail());
+        first_name.setText(user.getFirstName());
+        last_name.setText(user.getLastName());
+        emissions.setText("You have produced " + String.valueOf(emissionsPerKm) + " Grams of GHG today.");
+
+
+        Log.d("Last name: ", user.getLastName());
 
 
     }

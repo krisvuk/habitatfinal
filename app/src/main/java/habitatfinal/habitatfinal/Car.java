@@ -8,7 +8,9 @@ import java.util.ArrayList;
  */
 public class Car {
     private int carId;
-    private String carType;
+    private String carType, make, model, year, emissions;
+
+    public Car(){}
 
     public Car(int c, String ct)
     {
@@ -21,5 +23,37 @@ public class Car {
 
     public String getCarType() {
         return carType;
+    }
+
+    public void setMake(String _make){
+        make = _make;
+    }
+
+    public void setModel(String _model){
+        model = _model;
+    }
+
+    public void setYear(String _year){
+        year = _year;
+    }
+
+    public void setEmissions(String _emissions){
+        emissions = _emissions;
+    }
+
+    public String getMake(){
+        return make;
+    }
+
+    public String getModel(){
+        return model;
+    }
+
+    public String getYear(){
+        return year;
+    }
+
+    public String getEmissions(){
+        return emissions;
     }
 }

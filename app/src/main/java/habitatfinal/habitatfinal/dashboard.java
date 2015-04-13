@@ -1,6 +1,7 @@
 package habitatfinal.habitatfinal;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 import android.os.Handler;
@@ -20,14 +22,10 @@ public class dashboard extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // Create a GLSurfaceView instance and set it
         // as the ContentView for this Activity
         mGLSurface = new EarthGLSurfaceView(this);
         setContentView(mGLSurface);
-        //generates a list of cars
-        CarsAPI cars = new CarsAPI();
-        cars.execute();
     }
 
     @Override
