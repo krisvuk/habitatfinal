@@ -163,6 +163,7 @@ public class profile extends Activity {
 
         //addUser = new AddUser();
         i.putExtra("flag", 1);
+        i.putExtras(getIntent());
 
         startActivity(i, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
@@ -172,6 +173,7 @@ public class profile extends Activity {
 
         //addUser = new AddUser();
         i.putExtra("flag", 1);
+        i.putExtras(getIntent());
 
         startActivity(i, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
