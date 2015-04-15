@@ -2,6 +2,7 @@ package habitatfinal.habitatfinal;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcel;
@@ -12,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 
 import java.io.Serializable;
@@ -23,6 +25,7 @@ public class register extends Activity {
     AddUser addUser;
     int flag;
     String userEmail;
+    ProgressDialog prog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,7 @@ public class register extends Activity {
         Intent i = getIntent();
         setContentView(R.layout.activity_register);
         flag = i.getIntExtra("flag", 0);
+
         Spinner country_spinner = (Spinner) findViewById(R.id.country);
         country = new CountryAPI(country_spinner, this);
         country.execute("https://projectearthspirit.appspot.com/_ah/api/countries/v1/countries");

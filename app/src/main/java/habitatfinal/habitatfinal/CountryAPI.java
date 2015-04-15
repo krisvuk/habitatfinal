@@ -1,9 +1,11 @@
 package habitatfinal.habitatfinal;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 
 import org.apache.http.client.ClientProtocolException;
@@ -26,11 +28,16 @@ import java.util.ArrayList;
 public class CountryAPI extends AsyncTask<String, Void, ArrayList<String>> {
     private Spinner s4;
     private Context parent;
+    private ProgressDialog progress;
 
     public CountryAPI(Spinner s, Context c)
     {
         s4 = s;
         parent = c;
+        progress = new ProgressDialog(c);
+        progress.setCancelable(false);
+        progress.setMessage("Loading Countries....");
+        progress.show();
 
     }
     @Override
@@ -74,5 +81,6 @@ public class CountryAPI extends AsyncTask<String, Void, ArrayList<String>> {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(parent, android.R.layout.simple_list_item_1, response);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         s4.setAdapter(adapter);
+        progress.dismiss();
     }
 }

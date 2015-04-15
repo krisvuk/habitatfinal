@@ -23,12 +23,38 @@
         android:layout_marginTop="0dp"
         android:weightSum="1">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="225dp"
-            android:id="@+id/imageView6"
-            android:layout_gravity="center_horizontal"
-            android:background="@mipmap/profile3" />
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="262dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@mipmap/profile3"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Large Text"
+                android:id="@+id/profile_full_name"
+                android:layout_marginTop="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Large Text"
+                android:id="@+id/profile_score"
+                android:layout_below="@+id/profile_full_name"
+                android:layout_alignStart="@+id/profile_full_name"
+                android:layout_marginTop="68dp" />
+        </RelativeLayout>
 
         <ListView
             android:layout_width="match_parent"

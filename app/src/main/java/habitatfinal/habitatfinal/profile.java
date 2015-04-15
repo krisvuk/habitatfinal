@@ -21,6 +21,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
@@ -131,9 +134,8 @@ public class profile extends Activity {
         for(int i = 0; i < user.getCars().size(); i++){
             cars.add(user.getCars().get(i));
         }
-        double emissionsPerKm = Double.parseDouble(cars.get(0).getEmissions());
-
-        emissionsPerKm =  emissionsPerKm * 30.0;
+        double e = Double.parseDouble(cars.get(0).getEmissions())*30.00;
+        BigDecimal emissionsPerKm = new BigDecimal(e).setScale(2, BigDecimal.ROUND_FLOOR);
 
         String email, first_name, last_name, emissions, car;
 
@@ -146,10 +148,17 @@ public class profile extends Activity {
         List<String> info = new ArrayList<String>();
 
         info.add(email);
-        info.add(first_name + " " + last_name);
         info.add(emissions);
         info.add(car);
 
+        TextView profile_name = (TextView) findViewById(R.id.profile_full_name);
+        profile_name.setText(first_name + " " + last_name);
+
+        BigDecimal val = new BigDecimal((1.26/(e/1000))*10.00).setScale(2, BigDecimal.ROUND_FLOOR);
+        String score = String.valueOf(val);
+
+        TextView score_text = (TextView) findViewById(R.id.profile_score);
+        score_text.setText(score);
         ListView listview = (ListView) findViewById(R.id.profile_info);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 this,

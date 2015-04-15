@@ -1,6 +1,7 @@
 package habitatfinal.habitatfinal;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -40,6 +41,10 @@ public class transportation_survey extends Activity {
         model_type = (Spinner) findViewById(R.id.model_type_spinner);
         nextButton = (ImageView) findViewById(R.id.transportation_next);
         lister = new CarAsyncTask(year, this);
+        final ProgressDialog prog = new ProgressDialog(this);
+        prog.setMessage("Loading up cars from fuel economy");
+        prog.setCancelable(false);
+        prog.show();
         lister.execute("http://www.fueleconomy.gov/ws/rest/vehicle/menu/year");
         year.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -83,6 +88,7 @@ public class transportation_survey extends Activity {
                                 Log.i("Model", s2);
                                 vid.execute("http://www.fueleconomy.gov/ws/rest/vehicle/menu/options?year="+year.getSelectedItem().toString()+"&make="+ s +"&model="+s2);
                                 nextButton.setVisibility(View.VISIBLE);
+                                prog.dismiss();
                             }
 
                             @Override
