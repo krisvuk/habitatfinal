@@ -198,7 +198,6 @@ public class loginpage extends Activity {
 
             inputStream.close();
             return result;
-
         }
 
         @Override
@@ -225,8 +224,6 @@ public class loginpage extends Activity {
             i.setClass(getApplicationContext(),dashboard.class);
             startActivity(i);
         }
-
-
     }
 }
 //the path that the program takes is backwards - fix that

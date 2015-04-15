@@ -11,9 +11,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -103,7 +105,7 @@ public class profile extends Activity {
                                     moving = false;
                                     Toast.makeText(
                                             getApplicationContext(),
-                                            "User is not moving", Toast.LENGTH_LONG).show();
+                                            "User is not moving(" + String.valueOf(speed) +"km/h)", Toast.LENGTH_LONG).show();
                                 }
                                 startingLongitude = endingLongitude;
                                 startingLatitude = endingLatitude;
@@ -119,7 +121,7 @@ public class profile extends Activity {
             }
         };
 
-        timer.schedule(doAsynchronousTask, 0, 10000);
+        timer.schedule(doAsynchronousTask, 0, 20000);
 
         UserData user = (UserData)getApplication();
         Log.d("Email: ", user.getEmail());
@@ -133,18 +135,27 @@ public class profile extends Activity {
 
         emissionsPerKm =  emissionsPerKm * 30.0;
 
-        TextView email = (TextView) findViewById(R.id.email);
-        TextView first_name = (TextView) findViewById(R.id.firstName);
-        TextView last_name = (TextView) findViewById(R.id.lastName);
-        TextView emissions = (TextView) findViewById(R.id.emissions);
-        TextView car = (TextView) findViewById(R.id.car);
+        String email, first_name, last_name, emissions, car;
 
-        email.setText(user.getEmail());
-        first_name.setText(user.getFirstName());
-        last_name.setText(user.getLastName());
-        emissions.setText("You have produced " + String.valueOf(emissionsPerKm) + " Grams of GHG today.");
-        car.setText(user.getCars().get(0).getMake() + ", " + user.getCars().get(0).getModel() + ", " + user.getCars().get(0).getYear());
+        email = user.getEmail();
+        first_name = user.getFirstName();
+        last_name = user.getLastName();
+        emissions = "You have produced " + String.valueOf(emissionsPerKm) + " Grams of GHG today over 30 km.";
+        car = user.getCars().get(0).getMake() + ", " + user.getCars().get(0).getModel() + ", " + user.getCars().get(0).getYear();
 
+        List<String> info = new ArrayList<String>();
+
+        info.add(email);
+        info.add(first_name + " " + last_name);
+        info.add(emissions);
+        info.add(car);
+
+        ListView listview = (ListView) findViewById(R.id.profile_info);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                info );
+        listview.setAdapter(arrayAdapter);
 
         Log.d("Last name: ", user.getLastName());
 

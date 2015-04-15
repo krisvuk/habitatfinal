@@ -46,11 +46,9 @@ public class UserData extends Application {
         email = str;
     }
     public void setFirstName(String str) {
-        Log.d("setting email", str);
         firstName = str;
     }
     public void setLastName(String str) {
-        Log.d("setting email", str);
         lastName = str;
     }
 }

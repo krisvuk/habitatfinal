@@ -15,4 +15,5 @@
         <item>150-200</item>
         <item>200+</item>
     </string-array>
+    <string name="title_activity_splashpage">Splashpage</string>
 </resources>
